@@ -11,6 +11,12 @@ def eating_cookies(n, cache=None):
     # hard-coded starter list for n = 0, 1, 2
     permutations = [1, 1, 2]
 
+    # original recursive method
+    # not optimized for large values of n
+    # if n <= 2:
+    #     return permutations[n]
+    # return eating_cookies(n - 1) + eating_cookies(n - 2) + eating_cookies(n - 3)
+
     # pull from starter list if n is too small
     if n <= 2:
         total_perms = permutations[n]
